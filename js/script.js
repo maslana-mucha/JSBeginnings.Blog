@@ -41,7 +41,40 @@ for (let link of links) {
   link.addEventListener('click', titleClickHandler);
 }
 
+const optTitleListSelector = '.titles',
+  optArticleSelector = '.post',
+  optTitleSelector = '.post-title';
+  
 
+function generateTitleList () {
+  console.log('generateTitleList!');
+  /* remove all links in left column */
+  const titleList = document.querySelector(optTitleListSelector);
+  titleList.innerHTML = '';
+  // console.log('titleList is: ', titleList);
+  
+  const articles = document.querySelectorAll(optArticleSelector);
+  /* for each article: */
+  let html = '';
+  for (let article of articles) {
+    /* read its Id in new const*/
+    const articleId = article.getAttribute('id');
+    // console.log('articleId is: ', articleId);
 
+    /* find element containing title in new const */
+    const titleElement = article.querySelector(optTitleSelector).innerHTML;
+    // console.log('titleElement is: ', titleElement);
 
+    /* create link HTML in new const */
+    const linkHTML = '<li><a href="#' + articleId + '"><span>' + titleElement + '</span></a></li>';
+    // console.log(linkHTML);
+    
+    /* insert new HTML link to the list in the left column */
+    html = html + linkHTML;
+  }
+  titleList.insertAdjacentHTML('afterBegin', html);
+  console.log('titleList is: ', titleList);
+}
+
+generateTitleList();
 
