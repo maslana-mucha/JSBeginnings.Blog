@@ -105,6 +105,7 @@ body {
 .list-horizontal {
   li {
     display: inline-block;
+    padding-right: 5px;
   }
 }
 
@@ -128,8 +129,10 @@ body {
   }
 }
 
-.post-author {
-  font-style: italic;
+.post-author a {
+    text-decoration: none;
+    color: $color-light;
+    font-style: italic;
 }
 
 .post-tags {

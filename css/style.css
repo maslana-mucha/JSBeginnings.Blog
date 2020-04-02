@@ -95,6 +95,7 @@ body {
 
 .list-horizontal li {
   display: inline-block;
+  padding-right: 5px;
 }
 
 /* Authors */
@@ -113,7 +114,9 @@ body {
   animation-duration: 2s;
 }
 
-.post-author {
+.post-author a {
+  text-decoration: none;
+  color: #e2bd6e;
   font-style: italic;
 }
 
