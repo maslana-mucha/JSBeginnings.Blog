@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext");
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* Variables */
 /* Global */
 *,
@@ -8,9 +17,9 @@
 }
 
 body {
-  background: #fff;
+  background: rgba(0, 0, 0, 0.856);
   font-family: "Source Sans Pro", sans-serif;
-  color: #444;
+  color: #e2bd6e;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
@@ -31,7 +40,7 @@ body {
 .section-title span {
   text-transform: none;
   font-weight: 400;
-  color: #777777;
+  color: #f3e4c3;
 }
 
 /* Layout */
@@ -53,10 +62,9 @@ body {
 
 .sidebar,
 .posts {
-  background: #fff;
   margin-right: 10px;
   padding: 40px;
-  border: 1px solid #444;
+  border: 1px solid #e2bd6e;
   border-radius: 5px;
 }
 
@@ -74,6 +82,11 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.list a {
+  text-decoration: none;
+  color: #e2bd6e;
 }
 
 .list .active {
@@ -96,6 +109,8 @@ body {
 
 .post.active {
   display: block;
+  animation-name: appear;
+  animation-duration: 2s;
 }
 
 .post-author {

@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext");
-
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* Variables */
 
-$color-light: #fff;
-$color-dark: #444;
+$color-light: rgb(226, 189, 110);
+$color-dark: rgba(0, 0, 0, 0.856);
 
 $font-logo: "Sacramento", cursive;
 $font-header: "Oswald", sans-serif;
@@ -18,9 +25,9 @@ $font-text: "Source Sans Pro", sans-serif;
 }
 
 body {
-  background: $color-light;
+  background: $color-dark;
   font-family: $font-text;
-  color: $color-dark;
+  color: $color-light;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
@@ -40,7 +47,7 @@ body {
   span {
     text-transform: none;
     font-weight: 400;
-    color: lighten($color-dark, 20%);
+    color: lighten($color-light, 20%);
   }
 }
 
@@ -61,10 +68,9 @@ body {
 
 .sidebar,
 .posts {
-  background: $color-light;
   margin-right: 10px;
   padding: 40px;
-  border: 1px solid $color-dark;
+  border: 1px solid $color-light;
   border-radius: 5px;
 }
 
@@ -84,6 +90,11 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  a {
+    text-decoration: none;
+    color: $color-light;
+  }
 
   .active {
     font-weight: bold;
@@ -111,6 +122,8 @@ body {
 
   &.active {
     display: block;
+    animation-name: appear;
+    animation-duration: 2s;
   }
 }
 

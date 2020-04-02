@@ -35,17 +35,10 @@ function titleClickHandler (event) {
   correctArticle.classList.add('active');
 }
 
-const links = document.querySelectorAll('.titles a');
-
-for (let link of links) {
-  link.addEventListener('click', titleClickHandler);
-}
-
 const optTitleListSelector = '.titles',
   optArticleSelector = '.post',
   optTitleSelector = '.post-title';
   
-
 function generateTitleList () {
   console.log('generateTitleList!');
   /* remove all links in left column */
@@ -73,7 +66,14 @@ function generateTitleList () {
     html = html + linkHTML;
   }
   titleList.insertAdjacentHTML('afterBegin', html);
-  console.log('titleList is: ', titleList);
+  // console.log('titleList is: ', titleList);
+
+  /* link 'click' in generated link with titleClickHandler function */
+  const links = document.querySelectorAll('.titles a');
+
+  for (let link of links) {
+    link.addEventListener('click', titleClickHandler);
+  }
 }
 
 generateTitleList();
