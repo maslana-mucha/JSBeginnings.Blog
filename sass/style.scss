@@ -129,10 +129,16 @@ body {
   }
 }
 
-.post-author a {
-  text-decoration: none;
-  color: $color-light;
-  font-style: italic;
+.post-author {
+  a {
+    text-decoration: none;
+    color: $color-light;
+    font-style: italic;
+  }
+
+  li {
+    list-style-type: none;
+  }
 }
 
 .post-tags {
