@@ -281,9 +281,10 @@ function generateAuthors() {
     console.log('allAuthorsData: ', allAuthorsData);
   }
 
-  const authorList = document.querySelector(opt.AuthorsListSelector);
+  const authorsList = document.querySelector(opt.AuthorsListSelector);
+  console.log(authorsList);
   // authorList.innerHTML = allAuthorsHTML;
-  authorList.innerHTML = templates.authorListLink(allAuthorsData);
+  authorsList.innerHTML = templates.authorListLink(allAuthorsData);
 }
 
 generateAuthors();
