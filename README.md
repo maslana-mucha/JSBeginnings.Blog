@@ -1,1 +1,2 @@
-# Blog: simple one-page application. Using JavaScript to create dynamic effects.
+# Blog: simple one-page application 
+--> using JavaScript to create dynamic effects
